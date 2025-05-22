@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Application | DTFS</title>
+    <link
+      rel="shortcut icon"
+      href="assets/images/logo.png"
+      type="image/x-icon"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Instrument+Serif:ital@0;1&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/apply.css" />
+  </head>
+  <body>
+    <header class="header">
+      <a href="/">
+        <div class="logo">
+          <img class="logo-one" src="assets/images/logo.png" alt="" />
+          <img class="logo-two" src="assets/images/logo-b.png" alt="" />
+        </div>
+      </a>
+      <button class="close-btn">Close application</button>
+    </header>
+
+    <section class="container">
+      <div class="form-container">
+        <!-- Step 1: Personal & Contact Information -->
+        <div class="form-step active" id="step1">
+          <p class="stepss">Step 1/5</p>
+          <div class="step-header">
+            <h2 class="step-title">Personal & Contact Information</h2>
+          </div>
+          <p class="step-description">
+            We need your basic details to identify you and stay in touch
+            throughout the application process.
+          </p>
+
+          <form id="personalForm">
+            <div class="form-group">
+              <label for="fullName">Full Name</label>
+              <input
+                type="text"
+                id="fullName"
+                placeholder="John Doe"
+                class="form-control"
+              />
+              <div class="error-message">Please enter your full name</div>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email address</label>
+              <input
+                type="email"
+                id="email"
+                placeholder="Johndoe@gmail.com"
+                class="form-control"
+              />
+              <div class="error-message">
+                Please enter a valid email address
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="x">X/Twitter Username</label>
+              <input
+                type="text"
+                id="x"
+                placeholder="@Johndoe"
+                class="form-control"
+              />
+              <div class="error-message">Please enter your X Username</div>
+            </div>
+            <div class="form-group">
+              <label for="linkedIn">LinkedIn Username</label>
+              <input
+                type="text"
+                id="linkedIn"
+                placeholder="John Doe"
+                class="form-control"
+              />
+              <div class="error-message">
+                Please enter your LinkedIn Username
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="instagram">Instagram Username</label>
+              <input
+                type="text"
+                id="instagram"
+                placeholder="@Johndoe"
+                class="form-control"
+              />
+              <div class="error-message">
+                Please enter your Instagram Username
+              </div>
+            </div>
+
+            <button type="submit" class="btn-proceed">Proceed (2/5)</button>
+          </form>
+        </div>
+
+        <!-- Step 2: Tech Background & Experience -->
+        <div class="form-step" id="step2">
+          <p class="stepss">Step 2/5</p>
+          <div class="step-header">
+            <button class="back-btn" data-step="1">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M19 12H5"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M12 19L5 12L12 5"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+            <h2 class="step-title">Tech Background & Experience</h2>
+          </div>
+          <p class="step-description">
+            Tell us about your current tech journey, interests, and experience
+            level. This helps us tailor the scholarship to fit your unique needs
+            and aspirations.
+          </p>
+
+          <form id="techForm">
+            <div class="form-group">
+              <label>Are you new to Tech?</label>
+              <div class="radio-group">
+                <label class="radio-option">
+                  <input type="radio" name="newToTech" value="yes" />
+                  Yes, I'm new to Tech
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="newToTech" value="no" /> No, I have
+                  some knowledge or tech
+                </label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="techStack">Tech Stack / Niche of Interest</label>
+              <div class="select-wrapper">
+                <select id="techStack" class="form-control">
+                  <option value="" disabled selected>--Select --</option>
+                  <option value="DA">Data Analytics</option>
+                  <option value="TW">Technical Writing</option>
+                  <option value="UID">UI/UX Design</option>
+                  <option value="FE">Front End Engineering</option>
+                  <option value="BE">Backend Engineering</option>
+                  <option value="FSE">Full Stack Software Engineering</option>
+                  <option value="FD">Frontend for Designers</option>
+                  <option value="DS">Data Science</option>
+                  <option value="PCK">Python Programming for Kids</option>
+                  <option value="JSK">JavaScript Programming for Kids</option>
+                  <option value="UIDK">UI/UX Design for Kids</option>
+                  <option value="FEK">Front End Engineering for Kids</option>
+                  <option value="PP">Python & Pandas</option>
+                  <option value="CY">Cybersecurity</option>
+                  <option value="DF">Design for Frontend</option>
+                  <option value="DE">Design Engineering</option>
+                  <option value="PM">Project Management</option>
+                  <option value="ASQL">Advanced SQL</option>
+                  <option value="HTMLK">HTML for Kids</option>
+                  <option value="CSSK">CSS for Kids</option>
+                  <option value="MAE">Mobile App Engineering</option>
+                  <option value="EH">Ethical Hacking</option>
+                  <option value="PTC">Penetration Testing ++ Course</option>
+                  <option value="DM">Digital Marketing</option>
+                  <option value="SMM">Social Media Management</option>
+                  <option value="VA">Virtual Assistance Course</option>
+                  <option value="SB">Scripting with Bash</option>
+                  <option value="SP">Scripting with Python</option>
+                  <option value="TIH">
+                    Threat Intelligence and Hunting Course
+                  </option>
+                  <option value="MAC">Malware Analysis Course</option>
+                  <option value="JS">JavaScript</option>
+                  <option value="PY">Python</option>
+                  <option value="HTML">HTML</option>
+                  <option value="CSS">CSS</option>
+                  <option value="R">R</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="passion">Rate Your Passion for Tech (1-10)</label>
+              <input
+                type="number"
+                id="passion"
+                min="0"
+                max="10"
+                placeholder="Enter your rate here"
+                class="form-control"
+              />
+              <div class="error-message">Please rate your passion for tech</div>
+            </div>
+
+            <div class="form-group">
+              <label for="challenge"
+                >Tell us about the biggest challenge you’ve faced while learning
+                a tech stack.</label
+              >
+              <textarea
+                id="challenge"
+                placeholder="Enter your story here"
+                class="form-control"
+              ></textarea>
+              <div class="error-message">
+                Please tell us about a challenge you've faced
+              </div>
+            </div>
+
+            <button type="submit" class="btn-proceed">Proceed (3/5)</button>
+          </form>
+        </div>
+
+        <!-- Step 3: Scholarship Focus -->
+        <div class="form-step" id="step3">
+          <p class="stepss">Step 3/5</p>
+          <div class="step-header">
+            <button class="back-btn" data-step="2">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M19 12H5"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M12 19L5 12L12 5"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+            <h2 class="step-title">Scholarship Focus</h2>
+          </div>
+          <p class="step-description">
+            Help us understand the type of support you need and whether you're
+            open to alternative funding options.
+          </p>
+
+          <form id="scholarshipForm">
+            <div class="form-group">
+              <label for="scholarshipType">Type of Funding</label>
+              <div class="select-wrapper">
+                <select id="scholarshipType" class="form-control">
+                  <option value="" disabled>Please select</option>
+                  <option value="laptop">Laptop Funding</option>
+                  <option value="techTransition">
+                    Tech Transition Finding
+                  </option>
+                  <option value="loan">Educational Loan</option>
+                </select>
+              </div>
+              <div class="error-message">Please select a scholarship type</div>
+            </div>
+            <div class="form-group">
+              <label for="scholarshipType"
+                >How would you like to be funded?</label
+              >
+              <div class="select-wrapper">
+                <select id="scholarshipType" class="form-control">
+                  <option value="">Please select</option>
+                  <option value="full">
+                    Full scholarship (covers all costs)
+                  </option>
+                  <option value="partial">
+                    Partial scholarship (covers portion of costs)
+                  </option>
+                </select>
+              </div>
+              <div class="error-message">Please select a scholarship type</div>
+            </div>
+
+            <div class="form-group">
+              <label
+                >In case all fully funded options are exhausted, would you like
+                to be considered for a partially funded Scholarship?</label
+              >
+              <div class="radio-group">
+                <label class="radio-option">
+                  <input type="radio" name="incomeShare" value="yes" />
+                  Yes, I’m open to a partial funding
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="incomeShare" value="no" />No, I’ll
+                  wait till the next fully funded scholarship
+                </label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label
+                >How would you describe your current financial situation in
+                terms of pursuing a tech education?</label
+              >
+              <div class="radio-group">
+                <label class="radio-option">
+                  <input
+                    type="radio"
+                    name="financialSituation"
+                    value="struggling"
+                  />
+                  Currently struggling financially
+                </label>
+                <label class="radio-option">
+                  <input
+                    type="radio"
+                    name="financialSituation"
+                    value="assistance"
+                  />
+                  I can cover some costs but need partial support
+                </label>
+                <label class="radio-option">
+                  <input
+                    type="radio"
+                    name="financialSituation"
+                    value="first-gen"
+                  />
+                  First-generation college student or tech learner
+                </label>
+                <label class="radio-option">
+                  <input
+                    type="radio"
+                    name="financialSituation"
+                    value="underrepresented"
+                  />
+                  I belong to an underrepresented group in tech (e.g., BIPOC,
+                  women, etc.)
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="financialSituation" value="other" />
+                  Other (please specify)
+                </label>
+              </div>
+            </div>
+
+            <button type="submit" class="btn-proceed">Proceed (4/5)</button>
+          </form>
+        </div>
+
+        <!-- Step 4: Motivation & Personal Statement -->
+        <div class="form-step" id="step4">
+          <p class="stepss">Step 4/5</p>
+          <div class="step-header">
+            <button class="back-btn" data-step="3">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M19 12H5"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M12 19L5 12L12 5"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+            <h2 class="step-title">Motivation & Personal Statement</h2>
+          </div>
+          <p class="step-description">
+            Convince us why you’re the right fit, and helps us understand how
+            this grant/scholarship can transform your tech journey.
+          </p>
+
+          <form id="motivationForm">
+            <div class="form-group">
+              <label for="helpWithTech"
+                >Write a convincing note on why you should be awarded the DTFS
+                Scholarship.</label
+              >
+              <textarea
+                id="helpWithTech"
+                class="form-control"
+                placeholder="Enter your story here"
+              ></textarea>
+              <div class="error-message">
+                Please tell us why you should be awarded
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="techDream"
+                >Why did you choose this scholarship?</label
+              >
+              <textarea
+                id="techDream"
+                placeholder="Enter your story here"
+                class="form-control"
+              ></textarea>
+              <div class="error-message">
+                Please tell us whhy you choose this scholarship
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="personalJourney"
+                >Additional Convincing Words (Optional)</label
+              >
+              <textarea
+                id="personalJourney"
+                class="form-control"
+                placeholder="Enter your story here"
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn-proceed">Proceed (5/5)</button>
+          </form>
+        </div>
+
+        <!-- Step 5: Opportunity Marketing -->
+        <div class="form-step" id="step5">
+          <p class="stepss">Step 5/5</p>
+          <div class="step-header">
+            <button class="back-btn" data-step="4">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M19 12H5"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M12 19L5 12L12 5"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+            <h2 class="step-title">Opportunity Marketing</h2>
+          </div>
+          <p class="step-description">
+            Let us know how you discovered this opportunity and help us improve
+            our outreach for future applicants.
+          </p>
+
+          <form id="marketingForm">
+            <div class="form-group">
+              <label>How did you hear about the Tech Scholarship?</label>
+              <div class="radio-group">
+                <label class="radio-option">
+                  <input type="radio" name="discoverySource" value="twitter" />
+                  Twitter
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="discoverySource" value="facebook" />
+                  Facebook
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="discoverySource" value="linkedin" />
+                  LinkedIn
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="discoverySource" value="friend" /> A
+                  friend/colleague
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="discoverySource" value="other" />
+                  Other (please specify)
+                </label>
+              </div>
+            </div>
+
+            <button type="submit" class="btn-proceed">
+              Complete Your Application
+            </button>
+          </form>
+        </div>
+
+        <!-- Success Page -->
+        <div class="form-step" id="success">
+          <div class="success-container">
+            <div class="success-icon">✓</div>
+            <h2 class="success-title">Application Successful! 🎉</h2>
+            <p class="success-message">
+              Thank you for applying for the DTTS Scholarship! Your submission
+              has been received successfully.
+            </p>
+            <p class="success-message">
+              e appreciate the time and effort you put into your application. If
+              selected, you will be contacted via the email provided. Be sure to
+              keep an eye on your inbox (and spam folder) for updates.
+            </p>
+            <p class="success-message">
+              In the meantime, continue learning and growing—we believe in your
+              potential! 🚀
+            </p>
+            <p class="success-message">
+              For any inquiries, feel free to reach out.
+            </p>
+            <p class="success-message">Good luck!<br />DFTS Scholarship Team</p>
+            <button
+              onclick="window.location.href='mailto:funding@devtobs.com'"
+              style="margin: 0 auto"
+              class="contact-btn"
+            >
+              Contact Tech Advisor
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="JS/apply.js"></script>
+  </body>
+</html>

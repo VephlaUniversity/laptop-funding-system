@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Laptop Grant | DTFS</title>
+    <link
+      rel="shortcut icon"
+      href="assets/images/logo.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Instrument+Serif:ital@0;1&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/grant.css" />
+  </head>
+  <body>
+    <header class="header">
+      <a href="/">
+        <div class="logo">
+          <img class="logo-one" src="assets/images/logo.png" alt="" />
+          <img class="logo-two" src="assets/images/logo-b.png" alt="" />
+        </div>
+      </a>
+      <button onclick="window.location.href='index'" class="close-btn">
+        Close application
+      </button>
+    </header>
+
+    <div class="container">
+      <div class="course-card">
+        <h1 class="title">Devtobs - About Laptop Grant</h1>
+        <div class="course-image">
+          <img src="assets/images/Laptop Grants.png" alt="teck-kickstart" />
+        </div>
+        <div class="content">
+          <p>
+            We understand that starting a tech journey without the right
+            equipment can be frustrating. That’s why the Tech Kickstart Laptop
+            Grant exists, to break that barrier for you.
+
+            <br />
+            <br />
+            Through this grant, selected applicants will receive a brand-new
+            laptop to support their learning, creativity, and productivity.
+            Whether you're applying for design, development, data, or any
+            digital path, having a personal device is often the first major
+            step, and we’re here to make that happen.
+          </p>
+          <button onclick="window.location.href='apply'" class="primary-button">
+            Apply for a Laptop Grant
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Browse Laptops -->
+    <div class="laptops-browse">
+      <h1 class="title">Browse laptops grants</h1>
+
+      <div class="laptop-grid" id="laptopGrid">
+        <!-- Laptop cards will be generated here -->
+      </div>
+    </div>
+
+    <div class="course-main">
+      <div class="course-info">
+        <!-- Testimonial slider container -->
+        <div class="testimonial-container">
+          <div class="testimonial-slider">
+            <!-- Testimonial 1 -->
+            <div class="testimonial">
+              <div class="rating">★★★★★</div>
+              <p class="course-description">
+                This scholarship has really been a God sent in this time that
+                I’ve been wanting to have a tech skill, UI/UX to be precise, but
+                have not really had the funding to make this possible until
+                DevTobs came to the rescue. Thanks DevTobs.
+              </p>
+              <div class="course-meta">
+                <img
+                  class="avatar"
+                  src="assets/images/Judith.png"
+                  alt="beneficiary Avatar"
+                />
+                <div class="name-handler">
+                  <span class="beneficiary-name">Okwuo Judith </span> &nbsp;
+                  <span class="beneficiary-handle">@JudithOkwuo</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="testimonial">
+              <div class="rating">★★★★★</div>
+              <p class="course-description">
+                Without this scholarship I never would have taken the bold step
+                of switching to the Tech community and pursuing a Data Analytics
+                career. Getting the scholarship immediately presented a pathway
+                for me to get a laptop and it has also opened me up to
+                resources, materials, and more scholarships for me to learn and
+                earn. Thank you, and God bless you Dev. Tobs.
+              </p>
+              <div class="course-meta">
+                <img
+                  class="avatar"
+                  src="assets/images/Oluwaseyi.png"
+                  alt="beneficiary Avatar"
+                />
+                <div class="name-handler">
+                  <span class="beneficiary-name">Oluwaseyi Kolawole</span>
+                  <span class="beneficiary-handle">@Analytics_KOMA</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div class="testimonial">
+              <div class="rating">★★★★★</div>
+              <p class="course-description">
+                This scholarship is a big blessing to my life. It gave me hope
+                and strength to believe in myself again and now I’m rooting for
+                myself now more than ever before because I do not want to
+                disappoint Dev.tobs, who believed in me, and the people that
+                gave me life. I intend to make full use of this opportunity, God
+                willing
+              </p>
+              <div class="course-meta">
+                <img
+                  class="avatar"
+                  src="assets/images/Omogiate.png"
+                  alt="beneficiary Avatar"
+                />
+                <div class="name-handler">
+                  <span class="beneficiary-name">Omogiate Praise Uromwen</span>
+                  <span class="beneficiary-handle">@OmogiatePraise</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slider controls -->
+        <div class="slider-controls">
+          <button class="control-btn prev-btn">
+            <i class="fas fa-arrow-left"></i>
+          </button>
+          <div class="dots">
+            <span class="dot active" data-index="0"></span>
+            <span class="dot" data-index="1"></span>
+            <span class="dot" data-index="2"></span>
+          </div>
+          <button class="control-btn next-btn">
+            <i class="fas fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <footer>
+      <div class="footer-one">
+        <h2>
+          Build Your Future in Tech.<br />Let's Create Opportunities Together
+        </h2>
+        <div class="cta-sub">
+          <a href="apply" class="cta-button">Find a Scholarship</a>
+          <a href="mailto:funding@devtobs.com" class="outline-button"
+            >Get in touch <i class="fa-solid fa-arrow-right"></i
+          ></a>
+        </div>
+      </div>
+      <div class="footer-two">
+        <p>Contact</p>
+        <div class="footer-icon">
+          <a href="">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+          <a href=""><i class="fa-brands fa-x-twitter"></i></a>
+          <a href=""><i class="fa-brands fa-facebook"></i></a>
+          <a href=""><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="JS/grant.js"></script>
+  </body>
+</html>
