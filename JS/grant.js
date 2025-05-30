@@ -87,40 +87,83 @@ document.addEventListener("DOMContentLoaded", function () {
 
 const laptops = [
   {
-    image: "/assets/images/laptop1.png",
-    title: "HP ProBook 11 X360- TOUCH",
-    specs: "256GB SSD/4GB RAM-Intel CELERON QUAD CORE",
+    id: "dell-e7480",
+    image: "/assets/images/dell-e7840-a.jpg",
+    title: "Dell Latitude E7480",
+    specs: 'Core i5, 256GB SSD, 4GB RAM, 14" Display',
+    detailedSpecs: {
+      processor: "Intel Core i5",
+      storage: "256GB SSD",
+      memory: "4GB RAM",
+      display: '14" Display',
+      brand: "Dell",
+    },
   },
   {
-    image: "/assets/images/laptop2.png",
-    title: "HP ProBook 11 X360- TOUCH",
-    specs: "256GB SSD/4GB RAM-Intel CELERON QUAD CORE",
+    id: "dell-e7490",
+    image: "/assets/images/dell-e7490.jpg",
+    title: "Dell Latitude E7490",
+    specs: 'Core i5 8th Gen, 256GB SSD, 8GB RAM, 14" FHD',
+    detailedSpecs: {
+      processor: "Intel Core i5 8th Gen",
+      storage: "256GB SSD",
+      memory: "8GB RAM",
+      display: '14" FHD',
+      brand: "Dell",
+    },
   },
   {
-    image: "/assets/images/laptop2.png",
-    title: "HP ProBook 11 X360- TOUCH",
-    specs: "256GB SSD/4GB RAM-Intel CELERON QUAD CORE",
+    id: "hp-elitebook-840",
+    image: "/assets/images/hp-elitea.jpg",
+    title: "HP EliteBook 840 G5",
+    specs: 'Core i5-8350U, 256GB SSD, 8GB RAM, 14" FHD',
+    detailedSpecs: {
+      processor: "Intel Core i5-8350U",
+      storage: "256GB SSD",
+      memory: "8GB RAM",
+      display: '14" FHD',
+      brand: "HP",
+    },
   },
   {
-    image: "/assets/images/laptop2.png",
-    title: "HP ProBook 11 X360- TOUCH",
-    specs: "256GB SSD/4GB RAM-Intel CELERON QUAD CORE",
+    id: "hp-probook-430",
+    image: "/assets/images/hp-probook.jpg",
+    title: "HP ProBook 430 G6",
+    specs: "Core i5-8265U, 256GB SSD, 8GB RAM, Windows 11 Pro",
+    detailedSpecs: {
+      processor: "Intel Core i5-8265U",
+      storage: "256GB SSD",
+      memory: "8GB RAM",
+      os: "Windows 11 Pro",
+      brand: "HP",
+    },
   },
   {
-    image: "/assets/images/laptop1.png",
-    title: "HP ProBook 11 X360- TOUCH",
-    specs: "256GB SSD/4GB RAM-Intel CELERON QUAD CORE",
-  },
-  {
-    image: "/assets/images/laptop2.png",
-    title: "HP ProBook 11 X360- TOUCH",
-    specs: "256GB SSD/4GB RAM-Intel CELERON QUAD CORE",
+    id: "macbook-air-m1",
+    image: "/assets/images/mac.jpg",
+    title: "MacBook Air M1 (2020)",
+    specs: 'Apple M1 Chip, 256GB SSD, 8GB RAM, 13.3" Retina',
+    detailedSpecs: {
+      processor: "Apple M1 Chip",
+      storage: "256GB SSD",
+      memory: "8GB RAM",
+      display: '13.3" Retina Display',
+      brand: "Apple",
+    },
   },
 ];
 
 // Function to create laptop cards
 function createLaptopCards() {
   const laptopGrid = document.getElementById("laptopGrid");
+
+  if (!laptopGrid) {
+    console.error("Laptop grid element not found!");
+    return;
+  }
+
+  // Clear existing content
+  laptopGrid.innerHTML = "";
 
   laptops.forEach((laptop, index) => {
     const card = document.createElement("div");
@@ -133,7 +176,7 @@ function createLaptopCards() {
           <div class="laptop-info">
               <h3 class="laptop-title">${laptop.title}</h3>
               <p class="laptop-specs">${laptop.specs}</p>
-              <div class="action-button" data-laptop-index="${index}">
+              <div class="action-button" data-laptop-index="${index}" data-laptop-id="${laptop.id}">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
 <path d="M20.5 22H3.5" stroke="#1B8C44" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M19 3.5L5 17.5" stroke="#1B8C44" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
@@ -149,15 +192,45 @@ function createLaptopCards() {
   // Add click event listeners to all action buttons
   const actionButtons = document.querySelectorAll(".action-button");
   actionButtons.forEach((button) => {
-    button.addEventListener("click", function () {
+    button.addEventListener("click", function (e) {
+      e.preventDefault();
+
       const laptopIndex = this.getAttribute("data-laptop-index");
-      // Store the selected laptop index in localStorage to retrieve it on the details page
-      localStorage.setItem("selectedLaptopIndex", laptopIndex);
+      const laptopId = this.getAttribute("data-laptop-id");
+
+      // Store the laptop data for retrieval on the details page
+      const selectedLaptop = laptops[laptopIndex];
+
+      // Store data in memory (since sessionStorage isn't available in Claude artifacts)
+      window.selectedLaptopData = {
+        index: laptopIndex,
+        id: laptopId,
+        laptop: selectedLaptop,
+      };
+
       // Navigate to the laptop-details page
-      window.location.href = "laptop-details";
+      window.location.href = "laptop-details.html?id=" + laptopId;
     });
   });
 }
+
+// Function to get laptop by ID
+function getLaptopById(id) {
+  return laptops.find((laptop) => laptop.id === id);
+}
+
+// Function to get laptop by index
+function getLaptopByIndex(index) {
+  return laptops[parseInt(index)];
+}
+
+// Export functions for use in other scripts
+window.laptopStore = {
+  laptops: laptops,
+  getLaptopById: getLaptopById,
+  getLaptopByIndex: getLaptopByIndex,
+  createLaptopCards: createLaptopCards,
+};
 
 // Initialize the page
 document.addEventListener("DOMContentLoaded", () => {
