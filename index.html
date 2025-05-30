@@ -23,6 +23,12 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/grant.css" />
+    <style>
+      li {
+        color: #ccc;
+        padding-block: 4px;
+      }
+    </style>
   </head>
   <body>
     <header class="header">
@@ -32,30 +38,112 @@
           <img class="logo-two" src="assets/images/logo-b.png" alt="" />
         </div>
       </a>
-      <button onclick="window.location.href='index'" class="close-btn">
+      <button onclick="window.location.href='/'" class="close-btn">
         Close application
       </button>
     </header>
 
     <div class="container">
       <div class="course-card">
-        <h1 class="title">Devtobs - About Laptop Grant</h1>
+        <h1 class="title">Laptop Grant</h1>
         <div class="course-image">
           <img src="assets/images/Laptop Grants.png" alt="teck-kickstart" />
         </div>
         <div class="content">
-          <p>
-            We understand that starting a tech journey without the right
-            equipment can be frustrating. That’s why the Tech Kickstart Laptop
-            Grant exists, to break that barrier for you.
+          <p style="padding-bottom: 10px">
+            In many parts of Africa, brilliant minds are held back not by a lack
+            of ambition but by a lack of tools. A laptop, often taken for
+            granted elsewhere, remains a luxury for thousands of aspiring
+            developers, designers, analysts, and tech innovators. Yet, with the
+            right support, these same individuals could lead the future of tech.
+          </p>
+          <p style="padding-bottom: 10px">
+            That’s where a Laptop Grant comes in.More than just a device, each
+            laptop we provide is a launchpad giving recipients access to online
+            courses, career development opportunities, mentorship, and job
+            application support. It’s the difference between being left behind
+            and being ready to lead.
+          </p>
 
+          <p style="padding-bottom: 10px">
+            Take Raymond, for example.
             <br />
+            In 2021, Raymond received a laptop through the DTFS Laptop Grant. At
+            the time, he was eager to learn but stuck unable to participate
+            fully in an edtech course due to lack of access. With the laptop
+            came learning. With learning came skill. And by early 2024, Raymond
+            landed a role in tech, changing the course of his life, not because
+            he got lucky, but because he got the support he needed.
+            <em
+              >“Without that laptop, I wouldn’t be where I am today. It was the
+              spark I needed to take off.” —
+              <strong>Raymond, DTFS Grant Recipient</strong></em
+            >
+          </p>
+          <p style="padding-bottom: 10px">
+            Seeing stories like Raymond’s is what keeps us going. The
+            fulfillment we feel when someone prospers that’s what drives DTFS
+            forward. Because we don’t just fund dreams we help make them real.
+          </p>
+          <p style="padding-bottom: 10px">
+            It becomes really pertinent to note that Our Laptop Grant is
+            designed to support highly motivated individuals who are already
+            taking bold steps toward a tech career even without the right
+            resources.
+          </p>
+          <p style="padding-bottom: 10px">🎯 Who Is Eligible?</p>
+          <p style="padding-bottom: 10px">We’re looking for individuals who:</p>
+
+          <ul style="margin: 0 0 10px 20px">
+            <li>
+              Have a clear passion for learning and growing in the tech space
+            </li>
+            <li>
+              Can demonstrate progress made without a laptop — for example,
+              learning on a phone or borrowed device
+            </li>
+            <li>
+              Have saved a small amount toward a laptop, showing intentionality
+              and commitment
+            </li>
+            <li>
+              Are enrolled in or preparing to join an edtech course, bootcamp,
+              or online program
+            </li>
+            <li>
+              Can provide at least one person who can vouch for them , a mentor,
+              tutor, peer, or community leader
+            </li>
+            <li>
+              Are willing to undergo a review and selection process that
+              identifies readiness, drive, and growth potential
+            </li>
+          </ul>
+          <p style="padding-bottom: 10px">
+            This grant is not just about equipment, it's about recognizing drive
+            and removing barriers for those already doing their best with the
+            little they have.
+          </p>
+          <p style="padding-bottom: 10px">
+            Take Praise , for example. <br />
+            In 2022, She was learning on her phone, doing late-night lessons,
+            posting her minor achievements on twitter , struggling with
+            visibility, juggling data costs, but still pushing forward. She
+            applied for the Laptop Grant, was selected, and in two years, She
+            landed a full-time role. The laptop didn’t make her brilliant, it
+            simply unlocked what was already there.
             <br />
-            Through this grant, selected applicants will receive a brand-new
-            laptop to support their learning, creativity, and productivity.
-            Whether you're applying for design, development, data, or any
-            digital path, having a personal device is often the first major
-            step, and we’re here to make that happen.
+            <em
+              >“I was doing the work before. But when I got the laptop,
+              everything changed. It was my turning point.” —
+              <strong>Praise</strong></em
+            >
+          </p>
+          <p style="padding-bottom: 10px">
+            That’s what DTFS believes in: backing those who are already moving,
+            even if they’re crawling. If you have the fire, we’ll help you fuel
+            it. The impact of every laptop we give is real, and we’re proud to
+            stand behind the next wave of changemakers.
           </p>
           <button onclick="window.location.href='apply'" class="primary-button">
             Apply for a Laptop Grant
@@ -66,11 +154,9 @@
 
     <!-- Browse Laptops -->
     <div class="laptops-browse">
-      <h1 class="title">Browse laptops grants</h1>
+      <h1 class="title">Browse Laptop grants</h1>
 
-      <div class="laptop-grid" id="laptopGrid">
-        <!-- Laptop cards will be generated here -->
-      </div>
+      <div class="laptop-grid" id="laptopGrid"></div>
     </div>
 
     <div class="course-main">
@@ -82,17 +168,20 @@
             <div class="testimonial">
               <div class="rating">★★★★★</div>
               <p class="course-description">
-                This scholarship has really been a God sent in this time that
-                I’ve been wanting to have a tech skill, UI/UX to be precise, but
-                have not really had the funding to make this possible until
-                DevTobs came to the rescue. Thanks DevTobs.
+                This scholarship has been nothing short of a miracle for me.
+                I’ve dreamt of learning a tech skill, especially UI/UX for so
+                long, but the lack of funding made it feel impossible. Just when
+                I was about to give up, DevTobs came through like a lifeline.
+                You didn’t just fund my learning, you revived my dream. I’m
+                forever grateful. Thank you, DevTobs, for believing in someone
+                like me.
               </p>
               <div class="course-meta">
-                <img
+                <!-- <img
                   class="avatar"
                   src="assets/images/Judith.png"
                   alt="beneficiary Avatar"
-                />
+                /> -->
                 <div class="name-handler">
                   <span class="beneficiary-name">Okwuo Judith </span> &nbsp;
                   <span class="beneficiary-handle">@JudithOkwuo</span>
@@ -104,19 +193,22 @@
             <div class="testimonial">
               <div class="rating">★★★★★</div>
               <p class="course-description">
-                Without this scholarship I never would have taken the bold step
-                of switching to the Tech community and pursuing a Data Analytics
-                career. Getting the scholarship immediately presented a pathway
-                for me to get a laptop and it has also opened me up to
-                resources, materials, and more scholarships for me to learn and
-                earn. Thank you, and God bless you Dev. Tobs.
+                Before this scholarship, switching into tech felt like a distant
+                dream. I knew I wanted to pursue a career in Data Analytics, but
+                without the right tools or support, I was stuck. Getting the
+                DevTobs scholarship changed everything; it gave me the chance to
+                finally get a laptop and opened doors to resources, materials,
+                and even more opportunities to grow, learn, and earn. This
+                wasn’t just funding, it was a real breakthrough for me. Thank
+                you, DevTobs. You didn’t just support my journey, you helped me
+                start it.
               </p>
               <div class="course-meta">
-                <img
+                <!-- <img
                   class="avatar"
                   src="assets/images/Oluwaseyi.png"
                   alt="beneficiary Avatar"
-                />
+                /> -->
                 <div class="name-handler">
                   <span class="beneficiary-name">Oluwaseyi Kolawole</span>
                   <span class="beneficiary-handle">@Analytics_KOMA</span>
@@ -128,19 +220,19 @@
             <div class="testimonial">
               <div class="rating">★★★★★</div>
               <p class="course-description">
-                This scholarship is a big blessing to my life. It gave me hope
-                and strength to believe in myself again and now I’m rooting for
-                myself now more than ever before because I do not want to
-                disappoint Dev.tobs, who believed in me, and the people that
-                gave me life. I intend to make full use of this opportunity, God
-                willing
+                This scholarship has been a true blessing in my life. It
+                reignited my hope and gave me the strength to believe in myself
+                again. For the first time in a long while, I’m truly rooting for
+                myself not just for me, but for DevTobs, who believed in me, and
+                for the people who gave me life. I’m committed to making the
+                most of this opportunity, by God’s grace
               </p>
               <div class="course-meta">
-                <img
+                <!-- <img
                   class="avatar"
                   src="assets/images/Omogiate.png"
                   alt="beneficiary Avatar"
-                />
+                /> -->
                 <div class="name-handler">
                   <span class="beneficiary-name">Omogiate Praise Uromwen</span>
                   <span class="beneficiary-handle">@OmogiatePraise</span>
